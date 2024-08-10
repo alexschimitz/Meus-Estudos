@@ -10,7 +10,7 @@ int main()
     else if(idioma == 3) printf("こんにちは、世界！\n");//Japones
     else if(idioma == 4) printf("你好，世界！\n");//Chines
     else if(idioma == 5) printf("Привет, мир!\n");//Russo
-    else printf("Mundo, Olá!");// Padrao Portugues
+    else printf("Mundo, Olá!");//Padrão
 
     return 0;
 }
