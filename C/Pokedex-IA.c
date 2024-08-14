@@ -12,7 +12,7 @@ typedef struct {
     char nome[MAX_NOME];
     char tipo[MAX_TIPO];
     int indice_original;
-} Pokemon;
+}
 
 // Função de comparação para qsort e bsearch
 int comparar(const void *a, const void *b) {
