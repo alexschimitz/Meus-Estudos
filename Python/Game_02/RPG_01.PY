@@ -1,8 +1,15 @@
 from dataclasses import dataclass
 import pygame
+import os
+from pathlib import Path
+
 pygame.init()
 
-DIRETORIO_IMG = "Repositorios/Meus-Estudos/Python/Game_02/sprites/"
+# Obtém o diretório onde o script está localizado
+script_dir = Path(__file__).parent
+
+# Define o caminho para a pasta "sprites"
+DIRETORIO_IMG = script_dir / "sprites"
 # Define cores
 WHITE = (255, 255, 255)
 BLACK = (17, 17, 17)
@@ -20,11 +27,11 @@ clock = pygame.time.Clock()
 FPS = 60
 
 # Carrega o fundo
-background = pygame.image.load(f'{DIRETORIO_IMG}background.png').convert_alpha()
+background = pygame.image.load(f'{DIRETORIO_IMG}/background.png').convert_alpha()
 
 # Carrega o sprite, transforma sua dimensão, obtém retângulo e define posição x e y
-player_image = pygame.image.load(f'{DIRETORIO_IMG}red.png').convert_alpha()
-may_image = pygame.image.load(f'{DIRETORIO_IMG}May.png').convert_alpha()
+player_image = pygame.image.load(f'{DIRETORIO_IMG}/red.png').convert_alpha()
+may_image = pygame.image.load(f'{DIRETORIO_IMG}/May.png').convert_alpha()
 
 
 frame_width = 64   # Largura de cada frame
@@ -67,26 +74,26 @@ may_rect = may_transformed.get_rect()
 may_rect.x = 380
 may_rect.y = 340
 
-portal_image = pygame.image.load(f'{DIRETORIO_IMG}portal.png').convert_alpha()
+portal_image = pygame.image.load(f'{DIRETORIO_IMG}/portal.png').convert_alpha()
 portal_transformed = pygame.transform.scale(portal_image, (65,65))
 portal_rect = portal_transformed.get_rect()
 portal_rect.x = 655
 portal_rect.y = 145
 
-TV_image = pygame.image.load(f'{DIRETORIO_IMG}TV.png')
+TV_image = pygame.image.load(f'{DIRETORIO_IMG}/TV.png')
 TV_image.set_colorkey(WHITE)
 TV_transformed = pygame.transform.scale(TV_image, (100,105))
 TV_rect = TV_transformed.get_rect()
 TV_rect.x = 355
 TV_rect.y = 205
 
-cama_image = pygame.image.load(f'{DIRETORIO_IMG}cama.png').convert_alpha()
+cama_image = pygame.image.load(f'{DIRETORIO_IMG}/cama.png').convert_alpha()
 cama_transformed = pygame.transform.scale(cama_image, (100,180))
 cama_rect = cama_transformed.get_rect()
 cama_rect.x = 55
 cama_rect.y = 275
 
-skull_image = pygame.image.load(f'{DIRETORIO_IMG}skull.png').convert_alpha()
+skull_image = pygame.image.load(f'{DIRETORIO_IMG}/skull.png').convert_alpha()
 skull_transformed = pygame.transform.scale(skull_image, (60,70))
 skull_rect = skull_transformed.get_rect()
 skull_rect.x = 285
