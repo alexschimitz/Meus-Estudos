@@ -52,6 +52,3 @@ git sparse-checkout set Python/Game_02
 git checkout
 ```
 
-Agora você tem um markdown completo, direto ao ponto, sem divisões explicativas, apenas com as instruções e o código necessário.
-
-
