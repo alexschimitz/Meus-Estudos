@@ -28,3 +28,30 @@
 ## Bugs/Problemas Conhecidos
 
 - **Colisão**: Faltam colisões para as paredes, e as colisões existentes estão com problemas.
+
+## Como clonar apenas a pasta Python/Game_02 do repositório
+
+Para clonar apenas a pasta `Python/Game_02` do repositório `Meus-Estudos`, use o comando `git sparse-checkout`. Isso permitirá que você baixe somente o conteúdo dessa pasta, economizando espaço e tempo.
+
+Siga os comandos abaixo:
+
+```bash
+# Clone o repositório sem baixar o conteúdo completo
+git clone --no-checkout https://github.com/alexschimitz/Meus-Estudos.git
+
+# Entre no diretório do repositório
+cd Meus-Estudos
+
+# Habilite o sparse checkout
+git sparse-checkout init --cone
+
+# Defina para baixar apenas a pasta Python/Game_02
+git sparse-checkout set Python/Game_02
+
+# Baixe o conteúdo da pasta
+git checkout
+```
+
+Agora você tem um markdown completo, direto ao ponto, sem divisões explicativas, apenas com as instruções e o código necessário.
+
+
