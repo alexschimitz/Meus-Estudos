@@ -29,7 +29,7 @@
 
 - **Colisão**: Faltam colisões para as paredes, e as colisões existentes estão com problemas.
 
-## Como clonar apenas a pasta Pythondo repositório
+## Como clonar apenas a pasta Python do repositório
 
 Para clonar apenas a pasta `Python/Game_02` do repositório `Meus-Estudos`, use o comando `git sparse-checkout`. Isso permitirá que você baixe somente o conteúdo dessa pasta, economizando espaço e tempo.
 
